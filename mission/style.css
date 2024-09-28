@@ -46,3 +46,28 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2.5px;
 }
+
+body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-theme button {
+    background-color: #1e90ff;
+    color: white;
+}
+
+
