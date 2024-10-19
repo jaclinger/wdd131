@@ -1,0 +1,37 @@
+
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+h1 {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.topics {
+    grid-column: 1/2;
+}
+
+h3 {
+    grid-column: 2/3;
+}
+
+.description {
+    grid-column: 2/3
+}
+
+h2 {
+    display: block;
+}
+
+aside {
+    border: 1px;
+}
