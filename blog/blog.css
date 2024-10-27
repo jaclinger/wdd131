@@ -1,37 +1,94 @@
-
-
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    grid-column: 2/3;
+body {
+    font-family: Arial, sans-serif;
+    color: #4a4a4a;
+    background-color: #fff;
+}
+
+header {
     text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    color: #4a2c2a;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #4a2c2a;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.topics {
-    grid-column: 1/2;
+.posts {
+    flex: 2;
 }
 
-h3 {
-    grid-column: 2/3;
+.filters {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
 }
 
-.description {
-    grid-column: 2/3
+.post {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    gap: 20px;
 }
 
-h2 {
-    display: block;
+.post-date {
+    width: 100px;
+    text-align: right;
+    color: #a3a3a3;
+    font-size: 0.9rem;
 }
 
-aside {
-    border: 1px;
+.post-content h2 {
+    font-size: 1.5rem;
+    color: #b22222;
+    margin-bottom: 10px;
+}
+
+.post-content img {
+    max-width: 100px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.post-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.post-content a {
+    color: #b22222;
+    text-decoration: none;
+    font-weight: bold;
 }
