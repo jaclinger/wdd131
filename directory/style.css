@@ -1,0 +1,47 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Two columns */
+    grid-template-rows: auto;               /* Adjusts rows automatically */
+    gap: 10px;
+    width: max-content;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+#card_holder, #card_front, #card_back, #expiry_month, #expiry_year, #submit {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#card_back {
+    grid-column: span 2;
+    width: 100px;
+}
+
+#card_front {
+    width: 200px;
+}
+
+#card_holder {
+    grid-column: span 2;
+    width: 150px;
+}
+
+#submit {
+    grid-column: span 2;  /* Spans across both columns */
+    text-align: center;
+    width: 70px;
+}
+
+#expiry_month, #expiry_year {
+    width: 70px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 1rem;
+}
