@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Amatic SC";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font); /* Use primary font for body */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Stack logo and title vertically */
+    align-items: center; /* Center header items horizontally */
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for header */
+    font-family: var(--secondary-font); /* Apply secondary font to the header */
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header .search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    margin-top: 10px; /* Adds space between the header and search bar */
+    width: 80%; /* Adjust width as needed */
+    max-width: 500px; /* Optional: Set a max width */
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.search-btn {
+    background-color: #1B98E0;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    background-color: #59c3c3;
+}
+
+.book {
+    width: 100px;
+    margin-bottom: 10px; /* Optional: Add margin for spacing */
+}
+
+.preview {
+    display: flex; /* Apply flex layout */
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically if the height is sufficient */
+    gap: 10px; /* Space between the image and text */
+    margin-top: 20px;
+}
+
+.apple {
+    max-width: 200px;
+    max-height: 400px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Existing styles */
+
+.description {
+    /* This is where your description styles are defined */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .search-container {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .search-bar {
+        font-size: 14px;
+    }
+
+    .search-btn {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .book {
+        width: 80px;
+    }
+
+    .preview {
+        margin-top: 15px;
+    }
+
+    .apple {
+        max-width: 150px;
+        max-height: 300px;
+    }
+
+    .description {
+        display: none; /* Hide description on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header .search-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .search-btn {
+        width: 100%;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    .preview {
+        margin-top: 10px;
+    }
+
+    .apple {
+        max-width: 130px;
+        max-height: 250px;
+    }
+
+    footer {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .description {
+        display: none; /* Hide description on very small screens */
+    }
+}
+
