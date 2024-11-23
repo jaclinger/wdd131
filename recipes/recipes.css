@@ -91,10 +91,56 @@ header .search-container {
     max-height: 400px;
 }
 
-footer {
-    margin-top: 20px;
-    text-align: center;
+/* Add this to your existing CSS file */
+.recipe-image {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fits nicely into the box */
+    float: left; /* Align the image to the left */
+    margin-right: 20px; /* Add some spacing between the image and text */
+    border-radius: 10px; /* Optional: Add rounded corners for aesthetics */
 }
+
+.preview {
+    display: flex;
+    align-items: flex-start; /* Align items to the top-left */
+    flex-wrap: wrap; /* Adjust if there are multiple recipes displayed */
+}
+
+.preview main {
+    display: inline-block; /* Allow content to flow beside the image */
+    max-width: calc(100% - 170px); /* Account for the image width + margin */
+}
+
+.description {
+    float: right;
+    border-left: 20px;
+    padding-top: 50px;
+    height: 150px;
+}
+
+
+
+
+footer {
+    width: 100%;
+    padding: 20px;
+    padding-top: 150px;
+    background-color: #f0f0f0; /* You can change this to your preferred background color */
+  }
+  
+  .social {
+    display: grid;
+    grid-template-columns: repeat(3, 50px); /* Create 3 equal columns */
+    justify-items: center; /* Center the images horizontally */
+    gap: 0px; /* Adjust the spacing between the images */
+  }
+  
+  footer img {
+    width: 50px; /* Adjust the width of the images as needed */
+    height: auto;
+  }
+  
 
 /* Existing styles */
 
