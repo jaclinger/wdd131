@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light background for the page */
+}
+
+.logo_pic {
+    max-width: 150px;
+    display: block;
+}
+
+/* Header Styles */
+header {
+    background-color: #0D090A;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Login Form Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Center the login form vertically */
+    padding: 20px;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Max width of form */
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4F86C6;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #3e75a2; /* Slightly darker on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0D090A;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+footer .social-media {
+    display: flex;
+    gap: 15px;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #FFD700; /* Hover color for social links */
+}
+
+footer .copyright {
+    font-size: 14px;
+}
+
+/* Mobile and Responsive Design */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-form {
+        max-width: 90%; /* Make the form take up more space on smaller screens */
+    }
+}

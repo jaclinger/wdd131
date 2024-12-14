@@ -9,9 +9,11 @@ body {
 
 .logo_pic {
     max-width: 150px;
+    display: block;
 }
 
-header, footer {
+/* Header styles */
+header {
     background-color: #0D090A;
     color: #fff;
     padding: 10px 20px;
@@ -21,10 +23,10 @@ header, footer {
 }
 
 header .logo {
-    font-size: 24px;
     text-align: center;
-    flex: 1;
-    align-content: center;
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
 }
 
 header nav ul {
@@ -43,14 +45,18 @@ header nav ul li a {
     color: #fff;
 }
 
+/* Main content styles */
 main {
     flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align to the top */
     padding: 20px;
+    gap: 20px; /* Adds spacing between carousel and static content */
 }
 
+/* Carousel styles */
 .carousel {
     position: relative;
     width: 60%;
@@ -73,6 +79,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .slide img {
@@ -114,64 +121,76 @@ main {
 /* Footer styles */
 footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 10px; /* Add spacing between elements */
+    justify-content: space-between; /* Space out the items */
+    align-items: flex-start; /* Align items to the top of the footer */
+    padding: 10px 20px;
+    background-color: #0D090A;
+    color: #fff;
+}
+
+footer .social-media {
+    margin-left: auto; /* Push social media links to the far right */
+    display: flex;
+    gap: 15px; /* Space between the links */
 }
 
 footer .social-media a {
-    margin-left: 10px;
-    color: #fff;
     text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    padding: 20px 30px;
+footer .social-media a:hover {
+    color: #FFD700; /* Highlight effect on hover */
+}
+
+/* Footer asterisk text positioning */
+footer {
+    flex-basis: 100%; /* Makes this section span the full width */
+    text-align: left; /* Aligns the text to the left */
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.asterik {
+flex-basis: 100%; /* Makes this section span the full width */
+    text-align: left; /* Aligns the text to the left */
+    font-size: 10px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Styling the asterisk text */
+.asterik p {
+    margin: 5px 0;
+}
+
+/* Static content styles */
+.static-content {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling the form */
-.login-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-}
-
-.login-form h2 {
+.info-block {
     margin-bottom: 20px;
-    text-align: center;
+}
+
+.info-block h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: #333;
 }
 
-.login-form label {
-    margin-bottom: 5px;
+.info-block p {
+    font-size: 1.1em;
     color: #555;
-    font-size: 14px;
+    line-height: 1.6;
 }
 
-.login-form input {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.login-form button {
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #4F86C6;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.login-form button:hover {
-    background-color: #4F86C6;
-}
